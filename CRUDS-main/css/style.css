@@ -1,0 +1,22 @@
+/* .inputs{
+    background-color:#0FC2C0;
+}
+.outputs{
+    background-color:#0CABA8;
+} */
+/* body{
+    background-image: url(../bg2.png);
+    background-position: center center;
+    background-size: cover;
+} */
+
+.btn-outline-warning{
+    background-color: #015958;
+    color: yellowgreen;
+    border-color: #015958;
+}
+.btn-outline-danger{
+    background-color: #023535;
+    color: red;
+    border-color:#023535 ;
+}

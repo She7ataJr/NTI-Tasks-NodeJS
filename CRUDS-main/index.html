@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    
+
+    <section class="inputs">
+        <div class="w-75 mx-auto py-3">
+
+            <h3 class="fw-bolder my-2">CRUD APP</h3>
+    
+            <label for="NameInput" >Username :</label>
+            <input type="text" class="form-control mb-3"oninput="validateName()" id="NameInput">
+    
+            <label for="ageInput">age :</label>
+            <input type="number" class="form-control mb-3" oninput="validateAge()" id="ageInput">
+    
+            <label for="emailInput">email:</label>
+            <input type="email" class="form-control mb-3" id="emailInput">
+    
+            <label for="statusInput">status:</label>
+            <input type="text" class="form-control mb-3" id="statusInput">
+            <button  id="addBtn" class="btn btn-info">add user</button>
+        </div>    
+
+    </section>
+
+    <section class="outputs">
+        <div class="w-75 mx-auto p-4">
+            <label for="search">Search:</label>
+            <input type="text" class="form-control" oninput="Search(this.value)" id="search" placeholder="search by name"/>
+        </div>
+        <table class="table w-75 mx-auto my-4">
+            <thead>
+                <th>Index</th>
+                <th>Username</th>
+                <th>Age</th>
+                <th>email</th>
+                <th>Status</th>
+                <th>update</th>
+                <th>delete</th>
+    
+            </thead>
+            <tbody id="tableBody">
+             
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
