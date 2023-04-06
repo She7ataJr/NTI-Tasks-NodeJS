@@ -1,0 +1,58 @@
+{{>header}}
+{{>nav}}
+<section class="container my-5">
+    <div class="text-center">
+        <h3>All Notes</h3>
+    </div>
+    <div class="d-flex justify-content-between mb-4">
+            <a href="/add" class="btn btn-primary">
+                Add note
+            </a>
+            <a href="/delAll" class="btn btn-danger">
+                Delete All
+            </a>
+    </div>
+    <div class="mb-3">
+        <form action="/find/?{{title}}" method="get" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 mb-3"  name="title" placeholder="find By Title" >
+                <button class="btn btn-success my-2 my-sm-0 mb-3" type="submit">find</button>
+        </form>
+    </div>
+    <table class="table table-bordered" style="color: #FF8D29;">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th class="text-center">title</th>
+            <th class="text-center">content</th>
+            <th class="text-center">status</th>
+            <th class="text-center">due date</th>
+            <th class="text-center">Options</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#if hasData}}
+            {{#each allNotes}}
+            <tr>
+                <td>{{id}}</td>
+                <td class="text-center">{{title}}</td>
+                <td class="text-center">{{content}}</td>
+                <td class="text-center">{{status}}</td>
+                <td class="text-center">{{dueDate}}</td>
+
+                <td class="text-center">
+                    <a href="/single/{{id}}" class="btn btn-primary mx-3">Show</a>
+                    <a href="/edit/{{id}}" class="btn btn-warning mx-3">Edit</a>
+                    <a href="/del/{{id}}" class="btn btn-danger mx-3">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr>
+                <td colspan="5">No note yet</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}

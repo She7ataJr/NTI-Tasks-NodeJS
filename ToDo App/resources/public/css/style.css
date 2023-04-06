@@ -1,0 +1,18 @@
+body {
+  background-color: #541690 !important;
+  /* color:white !important; */
+}
+section {
+  background-color: #ff4949 !important;
+  color: white !important;
+}
+table {
+  background-color: #ff8d29 !important;
+  color: white !important;
+}
+form {
+  background-color: #ff8d29 !important;
+}
+footer {
+  background-color: #541690 !important;
+}

@@ -1,0 +1,17 @@
+{{>header}}
+{{>nav}}
+<section class="my-5 container">
+    {{#if note}}
+    <div class="text-center  text-white">
+        {{!-- <h3>{{note.id}}</h3> --}}
+        <h3>Title : {{note.title}}</h3>
+        <h3>Content : {{note.content}}</h3>
+        <h3>Status : {{note.status}}</h3>
+    </div>
+    {{else}}
+    <div class="alert alert-danger">
+        No note found
+    </div>
+    {{/if}}
+</section>
+{{>footer}}
