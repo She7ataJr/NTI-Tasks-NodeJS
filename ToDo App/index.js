@@ -1,8 +1,7 @@
-const app = require("./app/src")
+const app = require("./app/src");
 
-require("dotenv").config()
+require("dotenv").config();
 
-app.listen(
-    process.env.PORT,
-    ()=> console.log(`http://localhost:${process.env.PORT}`)
-)
+app.listen(process.env.PORT, () =>
+  console.log(`http://localhost:${process.env.PORT}`)
+);
