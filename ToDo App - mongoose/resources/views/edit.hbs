@@ -1,0 +1,24 @@
+{{>header}}
+{{>nav}}
+<section class="container my-5">
+    <h2>Edit Note</h2>
+    <form action="/editLogic/{{note.id}}">
+        <div class="mb-3">
+            <input name="name" class="form-control" placeholder="name" value="{{note.name}}">
+        </div>
+        <div class="mb-3">
+            <input name="content" class="form-control" placeholder="content" value="{{note.content}}">
+        </div>
+        <div class="mb-3">
+            <input name="dueDate"  type="date" class="form-control" placeholder="date" value="{{note.dueDate}}">
+        </div>
+        <div class="mb-3">
+            <input name="status"  class="form-control" value="true" readonly placeholder="true">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</section>
+
+{{>footer}}

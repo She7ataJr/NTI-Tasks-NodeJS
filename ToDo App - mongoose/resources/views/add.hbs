@@ -1,0 +1,24 @@
+{{>header}}
+{{>nav}}
+<section class="container my-5">
+    <h2>Add note</h2>
+    <form action="/addLogic">
+        <div class="mb-3">
+            <input name="name" class="form-control" value="{{name}}" placeholder="name">
+        </div>
+        <div class="mb-3">
+            <input name="content" class="form-control" value="{{content}}" placeholder="content">
+        </div>
+        <div class="mb-3">
+            <input name="dueDate" type="date" class="form-control" value="{{dueDate}}" placeholder="date">
+        </div>
+        <div class="mb-3">
+            <input name="status"  class="form-control" value="false" readonly placeholder="false">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</section>
+
+{{>footer}}
